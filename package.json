@@ -1,0 +1,24 @@
+{
+  "name": "slack-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hacker-salt/slack-app.git"
+  },
+  "keywords": [],
+  "author": "Ivana Huckova",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hacker-salt/slack-app/issues"
+  },
+  "homepage": "https://github.com/hacker-salt/slack-app#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "slackbots": "^1.2.0"
+  }
+}
