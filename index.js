@@ -2,7 +2,7 @@ const SlackBot = require('slackbots');
 const axios = require('axios');
 
 const bot = new SlackBot({
-  token: 'xoxb-622716498160-624536974679-Ika1ZZsofrrXOttDwCmTctLH',
+  token: 'xoxb-622716498160-624536974679-KCcCh3epJSy63bqdHnzRUM2x',
   name: 'HackerSalt'
 });
 
@@ -38,12 +38,12 @@ function findSalt(hacker) {
   axios
     .get(`https://hacker-salt.herokuapp.com/api/hacker/${hacker}`)
     .then(res => {
-      const comment = res.data.avg_slt_oall.toFixed(2);
+      const comment = res.data.top_cmnts_s.c_0.cleaned_comment;
 
       const params = {
         icon_emoji: ':rice:'
       };
-      bot.postMessageToChannel('general', `${hacker} saltiest score: ${comment}. Check out his saltiness at https://www.hackersalt.com/${hacker}`, params);
+      bot.postMessageToChannel('general', `${hacker}'s saltiest comment: "${comment}" Check out ${hacker}'s saltiness at https://www.hackersalt.com/${hacker}`, params);
     })
     .catch(err => {
       cancel();
