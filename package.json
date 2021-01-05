@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/hacker-salt/slack-app#readme",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "slackbots": "^1.2.0"
   }
 }
